@@ -1,0 +1,158 @@
+:root{
+    --fuentrePrincipal: 'Gothic A1', sans-serif;
+    --fuenteSecundaria: 'Oswald', sans-serif;
+    --primario: #f1a94e;
+    --secundario: #44b3c2;
+    --terciario: #5b5b5b;
+    --claro: #ffff;
+
+}
+
+html{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--secundario);
+}
+
+.contenedor{
+    max-width: 1100px;
+    width: 90%;
+    margin:0 auto;
+}
+
+img{
+    max-width: 100%;
+}
+
+h1{
+    font-size: 2.8rem;
+}
+
+h2{
+    font-size: 2.6rem;
+}
+
+h3{
+    font-size: 2.4rem;
+}
+
+p{
+    font-family: var(--fuentrePrincipal);
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+/*Hero*/
+.hero{
+    background-image: url(../img/fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    
+}
+
+.hero .contenedor{
+    display: grid;
+    align-content: center;
+    height: 100vh;
+}
+
+.hero .contenido{
+    text-align: center;
+    color: var(--claro);
+}
+
+.titulo{
+    margin: 0;
+    text-align: center;
+}
+
+.subtitulo{
+    font-size: 1.3rem;
+}
+
+/*Servicios*/
+
+.servicios{
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.servicios h2{
+    padding-bottom: .5rem;
+}
+
+.servicios h2::after{
+    height: .5rem;
+    width: 8rem;
+    background-color: var(--primario);
+    content: '';
+    display: block;
+    margin: 1rem auto 0 auto;
+}
+
+.servicios i{
+    font-size: 3rem;
+    color: var(--secundario);
+}
+@media screen and (min-width:768px) {
+    .servicios{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-column-gap: 2rem ;
+    }
+    
+}
+
+/*Portafolio*/
+
+.contenedor h2{
+    text-align: center;
+}
+
+.elementos{
+    border-bottom: 1px solid var(--terciario);
+    margin-bottom: 3rem;
+}
+
+.elementos:last-of-type{
+    border: none;
+}
+
+@media screen and (min-width:768px) {
+    .listado{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 2rem;
+        grid-auto-rows: max-content;
+    }
+
+    .elementos{
+        border: none;
+    }
+
+    .elementos:nth-child(3){
+         grid-row-end: span 2;
+    }
+}
+
+
+.footer{
+    background-image: url(..//img/contacto.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--claro);
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+@media screen and (min-width:768px) {
+    .footer .contenedor{
+        display: grid;
+        grid-template-columns: repeat(2, 30%) auto;
+    }    
+}
